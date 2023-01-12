@@ -1,6 +1,6 @@
 shiny::shinyServer(
   function(input, output, session){
-    observe({
+    shiny::observeEvent(input$type, {
       num.val <- string.to.num(input)
       
       if (num.val$type == "SCC"){

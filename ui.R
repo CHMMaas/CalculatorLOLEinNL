@@ -1,6 +1,6 @@
 shiny::shinyUI(
   shinydashboard::dashboardPage(
-    shinydashboard::dashboardHeader(title = "Calculator"),
+    shinydashboard::dashboardHeader(title = "LOLE Calculator"),
     shinydashboard::dashboardSidebar(
       shinydashboard::sidebarMenu(
         shinydashboard::menuItem("Dashboard", tabName = "dashboard", icon = icon("calculator")),
@@ -30,7 +30,7 @@ shiny::shinyUI(
                             choices = index.names()$full),
                 shiny::selectInput("gender", "Select gender", 
                             choices = c("Male", "Female")),
-                shiny::sliderInput("age", "Enter the age at which the patient was diagnosed", 18, 99, 68),
+                shiny::sliderInput("age", "Enter the age at which the patient was diagnosed", 18, 90, 68),
                 shiny::sliderInput("year", "Enter the calendar year in which the patient was diagnosed", 1989, 2018, 2010, sep = ""),
                 shiny::sliderInput("survived", "Enter the number of years survived after diagnosis", 0, 10, 0, sep = ""),
                 shiny::selectInput("stage", "Select the cancer stage at diagnosis",

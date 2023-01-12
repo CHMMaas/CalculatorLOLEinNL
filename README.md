@@ -1,4 +1,4 @@
-# Online webapp: https://mdmerasmusmc.shinyapps.io/LOLECalculator/ as a supplement to the paper: "The evolution of the loss of life expectancy in patients with solid malignancies: a population-based study in the Netherlands, 1989-2019" 
+# Web-based application as a supplement to the paper: "The evolution of the loss of life expectancy in patients with solid malignancies: a population-based study in the Netherlands, 1989-2019" 
 
 ### Authors: Carolien C.H.M. Maas, David van Klaveren, Otto Visser, Prof Matthias A.W. Merkx, Prof Hester F. Lingsma, Prof Valery E.P.P. Lemmens, Avinash G. Dinmohamed
 
@@ -16,3 +16,5 @@ The evolution of LOLE substantially varies across cancer type, age, and disease 
 
 **Funding**
 None.
+
+Calculator: https://mdmerasmusmc.shinyapps.io/LOLECalculator/

@@ -6,27 +6,11 @@ library(shiny)
 library(shinyjs) # update after clicking calculate
 library(shinydashboard)
 library(dashboardthemes)
-library(DT) # for tables
-# icons shiny: https://fontawesome.com/v5.15/icons?d=gallery&p=2
-# colors shiny: https://rstudio.github.io/shinydashboard/appearance.html
+library(DT)     # for tables
 
 #####
 ##### Obtain LOLE estimates for all cancer types
 #####
-# results.LOLE <- haven::read_dta('G:/IKNL/Registratie en Onderzoek/Onderzoek/projecten lopend/LOLE/Hoog-over/Data/file_for_tool.dta')
-# # avoid errors
-# for (one.gender in c("CERV", "ENDO", "FBRE", "OFT", "PROST", "TEST")){
-#   temp <- results.LOLE[results.LOLE$type==one.gender, ]
-#   if (one.gender=="CERV" | one.gender=="ENDO" | one.gender=="FBRE" | one.gender=="OFT"){
-#     temp$geslacht <- 1
-#   }
-#   if (one.gender=="PROST" | one.gender=="TEST"){
-#     temp$geslacht <- 2
-#   }
-#   results.LOLE <- rbind(results.LOLE, temp)
-# }
-# save(results.LOLE, file='LOLE_estimates.Rdata')
-
 load(file='LOLE_estimates.Rdata')
 results.LOLE[is.na(results.LOLE)] <- 999
 
@@ -40,12 +24,12 @@ index.names <- function(){
                       "Colorectum",
                       "Esophagus, cardia, stomach",
                       "Endometria",
-                      "Female breast",
+                      "Breast",
                       "Head, neck",
                       "Hepato, pancreato, biliary",
                       "Kidney",
                       "Lung",
-                      "Skin melanoma",
+                      "Melanoma of the skin",
                       "Ovary, fallopian tube",
                       "Prostate",
                       "Squamous cell carcinoma",

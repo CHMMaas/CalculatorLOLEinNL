@@ -11,6 +11,22 @@ library(DT)     # for tables
 #####
 ##### Obtain LOLE estimates for all cancer types
 #####
+
+# TODO: DON'T PUT THIS ON GITHUB:
+# results.LOLE <- haven::read_dta('G:/IKNL/Registratie en Onderzoek/Onderzoek/projecten lopend/LOLE/Hoog-over/Data/file_for_tool.dta')
+# # avoid errors
+# for (one.gender in c("CERV", "ENDO", "FBRE", "OFT", "PROST", "TEST")){
+#   temp <- results.LOLE[results.LOLE$type==one.gender, ]
+#   if (one.gender=="CERV" | one.gender=="ENDO" | one.gender=="FBRE" | one.gender=="OFT"){
+#     temp$geslacht <- 1
+#   }
+#   if (one.gender=="PROST" | one.gender=="TEST"){
+#     temp$geslacht <- 2
+#   }
+#   results.LOLE <- rbind(results.LOLE, temp)
+# }
+# save(results.LOLE, file='LOLE_estimates.Rdata')
+
 load(file='LOLE_estimates.Rdata')
 results.LOLE[is.na(results.LOLE)] <- 999
 

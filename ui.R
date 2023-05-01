@@ -15,9 +15,6 @@ shiny::shinyUI(
                                   dashboardthemes::shinyDashboardThemes(theme = "grey_light"),
           shiny::fluidPage(
             shinyjs::useShinyjs(),
-            shinydashboard::box(width = 12,
-                title = "This web application is under development", status="warning", 
-                solidHeader=FALSE),
             shinydashboard::box(width = 6,
                 title = "Adjust the patient characteristics",
                 solidHeader = FALSE, status = "primary", 
